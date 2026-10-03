@@ -1,0 +1,275 @@
+.header {
+  width: 100%;
+  height: 72px;
+
+  background: #031d32;
+  color: #ffffff;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-container {
+  width: min(1180px, calc(100% - 64px));
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  max-width: none;
+  object-fit: cover;
+  flex-shrink: 0;
+
+}
+
+/* =========================
+   MENU DESKTOP
+========================= */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navigation > a {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.navigation > a:hover {
+  color: #2baaf2;
+}
+
+/* =========================
+   BOTÃO WHATSAPP
+========================= */
+
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 11px 18px;
+
+  border-radius: 30px;
+
+  background: #20c968;
+  color: #ffffff !important;
+
+  font-weight: 700 !important;
+
+  transition: 0.2s ease;
+}
+
+.whatsapp-button svg {
+  font-size: 17px;
+}
+
+.whatsapp-button:hover {
+  background: #18b65c;
+
+  transform: translateY(-1px);
+}
+
+/* =========================
+   BOTÃO MOBILE
+========================= */
+
+.menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #ffffff;
+
+  font-size: 27px;
+
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   MENU MOBILE
+========================= */
+
+.mobile-menu {
+  display: none;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 800px) {
+
+  .header {
+    height: 68px;
+  }
+
+  .header-container {
+    width: calc(100% - 30px);
+  }
+
+  /* Logo */
+
+  .logo img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  /* Esconde menu desktop */
+
+  .navigation {
+    display: none;
+  }
+
+  /* Mostra botão */
+
+  .menu-button {
+    display: flex;
+  }
+
+  /* Menu mobile */
+
+  .mobile-menu {
+    position: absolute;
+
+    top: 68px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 18px 20px 22px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    background: #031d32;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+  /* Quando aberto */
+
+  .mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+  /* Links */
+
+  .mobile-menu > a {
+    width: 100%;
+
+    padding: 14px 12px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+  }
+
+  .mobile-menu > a:hover {
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #2baaf2;
+  }
+
+  /* WhatsApp mobile */
+
+  .mobile-whatsapp {
+    margin-top: 8px;
+
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #20c968;
+
+    color: #ffffff !important;
+
+    border-radius: 25px !important;
+
+    text-align: center;
+  }
+
+  .mobile-whatsapp:hover {
+    background: #18b65c !important;
+    color: #ffffff !important;
+  }
+
+  .mobile-whatsapp svg {
+    font-size: 18px;
+  }
+}

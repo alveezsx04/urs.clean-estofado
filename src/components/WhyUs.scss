@@ -1,0 +1,204 @@
+.why-us {
+  width: 100%;
+  background: #031d32;
+  overflow: hidden;
+}
+
+.why-us-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  min-height: 310px;
+}
+
+/* IMAGEM */
+
+.why-us-image {
+  width: 100%;
+  height: 100%;
+  min-height: 310px;
+  overflow: hidden;
+}
+
+.why-us-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* CONTEÚDO */
+
+.why-us-content {
+  padding: 45px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-us-label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #45aef5;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.why-us-content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* BENEFÍCIOS */
+
+.why-us-benefits {
+  width: 100%;
+  margin-top: 35px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.why-us-benefit {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.why-us-icon {
+  width: 40px;
+  height: 40px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #4db5ff;
+
+  font-size: 25px;
+
+  flex-shrink: 0;
+}
+
+.why-us-icon svg {
+  width: 25px;
+  height: 25px;
+
+  stroke-width: 1.8;
+}
+
+.why-us-benefit h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.why-us-benefit p {
+  margin: 4px 0 0;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .why-us-container {
+    grid-template-columns: 38% 62%;
+  }
+
+  .why-us-content {
+    padding: 35px 35px;
+  }
+
+  .why-us-content h2 {
+    font-size: 22px;
+  }
+
+  .why-us-benefits {
+    gap: 12px;
+  }
+
+  .why-us-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .why-us-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .why-us-benefit h3 {
+    font-size: 11px;
+  }
+
+  .why-us-benefit p {
+    font-size: 10px;
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+  .why-us-container {
+    grid-template-columns: 1fr;
+  }
+
+  .why-us-image {
+    min-height: 240px;
+    max-height: 280px;
+  }
+
+  .why-us-content {
+    padding: 35px 25px 40px;
+  }
+
+  .why-us-content h2 {
+    font-size: 23px;
+  }
+
+  .why-us-benefits {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+    margin-top: 30px;
+  }
+}
+
+/* CELULAR PEQUENO */
+
+@media (max-width: 480px) {
+  .why-us-content {
+    padding: 30px 20px 35px;
+  }
+
+  .why-us-content h2 {
+    font-size: 21px;
+  }
+
+  .why-us-benefits {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 15px;
+  }
+}

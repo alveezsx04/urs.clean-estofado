@@ -1,0 +1,269 @@
+.contact-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: #eef9f4;
+}
+
+.contact-section *,
+.contact-section *::before,
+.contact-section *::after {
+  box-sizing: border-box;
+}
+
+.contact-area {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 46% 54%;
+}
+
+/* =========================
+   ÁREA DE ATENDIMENTO
+========================= */
+
+.contact-service-area {
+  min-height: 270px;
+
+  padding: 42px 55px;
+
+  background: #062b49;
+  color: #ffffff;
+}
+
+.contact-service-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.contact-service-title svg {
+  width: 23px;
+  height: 23px;
+
+  flex-shrink: 0;
+
+  color: #48b2f5;
+
+  stroke-width: 1.8;
+}
+
+.contact-service-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.contact-service-area h3 {
+  margin: 18px 0 5px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.contact-service-area > p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.contact-locations {
+  margin-top: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.contact-locations span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 10px;
+  line-height: 1;
+}
+
+/* =========================
+   ENTRE EM CONTATO
+========================= */
+
+.contact-action {
+  min-height: 270px;
+
+  padding: 38px 45px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #eefaf5;
+}
+
+.contact-action-icon {
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #25bf69;
+}
+
+.contact-action-icon svg {
+  width: 48px;
+  height: 48px;
+
+  display: block;
+
+  stroke-width: 1.5;
+}
+
+.contact-action-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-action-content h2 {
+  margin: 0;
+
+  color: #123450;
+
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.contact-action-content p {
+  margin: 7px 0 15px;
+
+  color: #60717c;
+
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.contact-whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 19px;
+
+  border-radius: 30px;
+
+  background: #25c96b;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.contact-whatsapp-button:hover {
+  background: #1bb75d;
+  transform: translateY(-1px);
+}
+
+.contact-whatsapp-button svg {
+  width: 15px;
+  height: 15px;
+
+  stroke-width: 2;
+}
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.contact-information {
+  min-width: 145px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-information-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  color: #193b55;
+
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.contact-information-item svg {
+  width: 15px;
+  height: 15px;
+
+  flex-shrink: 0;
+
+  color: #193b55;
+
+  stroke-width: 1.8;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+  .contact-area {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-service-area,
+  .contact-action {
+    min-height: auto;
+  }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 650px) {
+  .contact-service-area {
+    padding: 35px 22px;
+  }
+
+  .contact-action {
+    padding: 35px 22px;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-information {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
